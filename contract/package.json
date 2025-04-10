@@ -1,0 +1,15 @@
+{
+  "name": "synphonic-nft",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "near-sdk-as": "3.2.3"
+  },
+  "devDependencies": {
+    "assemblyscript": "0.19.23"
+  },
+  "scripts": {
+    "build": "asb",
+    "test": "asp"
+  }
+} 

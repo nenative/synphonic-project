@@ -1,0 +1,16 @@
+{
+  "name": "synphonic-music-nft",
+  "version": "1.0.0",
+  "description": "NEAR NFT contract for music files",
+  "scripts": {
+    "build": "asb",
+    "test": "asp --nologo",
+    "deploy": "near deploy"
+  },
+  "dependencies": {
+    "near-sdk-as": "3.2.3"
+  },
+  "devDependencies": {
+    "near-sdk-as": "3.2.3"
+  }
+} 
