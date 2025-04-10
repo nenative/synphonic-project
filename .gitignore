@@ -2,6 +2,8 @@
 
 # dependencies
 node_modules/
+/.pnp
+.pnp.js
 .near/
 
 # testing
@@ -9,7 +11,7 @@ node_modules/
 
 # production
 /build
-dist/
+/dist
 
 # misc
 .DS_Store
@@ -33,3 +35,11 @@ yarn-error.log*
 
 # System Files
 Thumbs.db
+
+# NEAR specific
+/contract/build/
+/contract/node_modules/
+/contract/.env
+
+# IPFS
+/ipfs-data/

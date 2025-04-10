@@ -1,59 +1,87 @@
-# Synphonic - Music NFT Platform
+# Synphonic NFT Platform
 
-Synphonic is a decentralized platform that enables musicians to mint and sell their music as NFTs on the NEAR blockchain. This platform bridges the gap between artists and Web3, providing a simple and intuitive interface for creating music NFTs.
+A decentralized platform for minting and managing music NFTs on the NEAR blockchain.
 
 ## Features
 
-- **Easy Music NFT Minting**: Upload MP3 files and mint them as NFTs with just a few clicks
-- **NEAR Wallet Integration**: Seamless connection with NEAR wallet for secure transactions
-- **User-Friendly Interface**: Clean, modern design built with React and Chakra UI
-- **Decentralized Storage**: Music files are stored securely on the blockchain
+- Mint music NFTs with metadata
+- View and manage your NFT collection
+- IPFS integration for decentralized storage
+- NEAR wallet integration
+- Modern React UI with Tailwind CSS
 
-## Technology Stack
+## Prerequisites
 
-- Frontend: React.js with TypeScript
-- UI Framework: Chakra UI
-- Blockchain: NEAR Protocol
-- Authentication: NEAR Wallet
-- Smart Contracts: NEAR Smart Contracts
+- Node.js (v16 or higher)
+- npm (v7 or higher)
+- NEAR wallet account
+- IPFS node (optional, can use public gateway)
 
-## Getting Started
+## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/nenative/synphonic-project.git
+git clone https://github.com/yourusername/synphonic-project.git
+cd synphonic-project
 ```
 
 2. Install dependencies:
 ```bash
-cd synphonic-project
 npm install
 ```
 
-3. Start the development server:
+3. Set up environment variables:
+Create a `.env` file in the root directory with:
+```
+REACT_APP_NEAR_NETWORK_ID=testnet
+REACT_APP_NEAR_NODE_URL=https://rpc.testnet.near.org
+REACT_APP_NEAR_WALLET_URL=https://wallet.testnet.near.org
+REACT_APP_NEAR_HELPER_URL=https://helper.testnet.near.org
+REACT_APP_NEAR_EXPLORER_URL=https://explorer.testnet.near.org
+REACT_APP_IPFS_GATEWAY=https://ipfs.io/ipfs/
+```
+
+## Development
+
+1. Start the development server:
 ```bash
 npm start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+2. Build the smart contract:
+```bash
+cd contract
+npm run build
+```
 
-## Usage
+3. Deploy the contract (requires NEAR CLI):
+```bash
+npm run deploy
+```
 
-1. Connect your NEAR wallet using the "Connect NEAR Wallet" button
-2. Upload your MP3 file
-3. Add title and description for your music NFT
-4. Click "Mint NFT" to create your music NFT
+## Project Structure
 
-## Contributing
-
-We welcome contributions to Synphonic! Please feel free to submit issues and pull requests.
+```
+synphonic-project/
+├── contract/           # NEAR smart contract
+│   ├── assembly/      # AssemblyScript source
+│   └── build/         # Compiled contract
+├── src/               # React application
+│   ├── components/    # React components
+│   ├── hooks/         # Custom hooks
+│   ├── utils/         # Utility functions
+│   └── App.tsx        # Main application
+└── public/            # Static assets
+```
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## Contributing
 
-- NEAR Protocol
-- Chakra UI
-- React.js community
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request

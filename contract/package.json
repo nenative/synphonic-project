@@ -1,15 +1,22 @@
 {
-  "name": "synphonic-nft",
+  "name": "synphonic-nft-contract",
   "version": "1.0.0",
-  "license": "MIT",
-  "dependencies": {
-    "near-sdk-as": "3.2.3"
+  "description": "NEAR NFT contract for Synphonic music platform",
+  "main": "index.js",
+  "scripts": {
+    "asbuild:untouched": "asc assembly/index.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "test": "asp",
+    "deploy": "near deploy --wasmFile build/release/assembly.wasm --accountId nenative2121.testnet"
   },
   "devDependencies": {
-    "assemblyscript": "0.19.23"
+    "assemblyscript": "0.19.23",
+    "near-sdk-as": "^3.2.3"
   },
-  "scripts": {
-    "build": "asb",
-    "test": "asp"
+  "dependencies": {
+    "near-sdk-bindgen": "^3.2.1",
+    "near-sdk-core": "^3.2.1",
+    "visitor-as": "^0.3.2"
   }
-} 
+}

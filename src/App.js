@@ -3,6 +3,7 @@ import { Box, Container, ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MintPage from './pages/MintPage';
 import Navbar from './components/Navbar';
+import MarketplacePage from './pages/MarketplacePage';
 
 // Create a custom theme with some defaults
 const theme = extendTheme({
@@ -23,7 +24,8 @@ function App() {
           <Navbar />
           <Container maxW="container.xl" py={8}>
             <Routes>
-              <Route path="/" element={<MintPage />} />
+              <Route path="/" element={<MarketplacePage />} />
+              <Route path="/mint" element={<MintPage />} />
             </Routes>
           </Container>
         </Box>
